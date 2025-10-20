@@ -129,7 +129,7 @@ class ApplicationPropertiesAndControllerTests {
     @Test
     void testDeleteFruitSuccess() throws Exception {
         when(fruitService.delete(anyLong())).thenReturn(sampleFruit);
-        mockMvc.perform(delete("/fruit/{id}", 1L))
+        mockMvc.perform(delete("/workintech/fruits/{id}", 1L))
                 .andExpect(status().isOk());
     }
 }
